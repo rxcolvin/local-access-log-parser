@@ -98,30 +98,4 @@ public class Main {
 
   }
 
-  static class Res {
-    public int count = 0;
-    public float ave = 0;
-
-    void add(int value) {
-      ave = (ave * count + value) / (count + 1);
-      count++;
-    }
-  }
-
-  static class ResultWriter {
-    final PrintWriter pw;
-
-    ResultWriter(final PrintWriter pw) {
-      this.pw = pw;
-    }
-
-    void write(Map<Long, Res> map ) {
-      for (Long aLong : map.keySet()) {
-        Res r = map.get(aLong);
-
-        pw.println(aLong + ", " + r.ave + ", " + r.count);
-      }
-
-    }
-  }
 }
