@@ -11,7 +11,7 @@ public class ResultWriter {
     this.pw = pw;
   }
 
-  void write(Map<Long, Res> map) {
+  public final void write(Map<Long, Res> map) {
     for (Long aLong : map.keySet()) {
       Res r = map.get(aLong);
 
